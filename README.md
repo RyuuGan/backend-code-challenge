@@ -29,7 +29,7 @@ Dear candidate, please follow this readme and solve all questions.
 2. Use the api.nasa.gov
   - the API-KEY is `N7LkblDsc5aen05FJqBQ8wU4qSdmsftwJagVK7UD`
   - documentation: https://api.nasa.gov/api.html#neows-feed
-  
+
 3. Write a command
   - to request the data from the last 3 days from nasa api
   - response contains count of Near-Earth Objects (NEOs)
@@ -65,7 +65,7 @@ Dear candidate, please follow this readme and solve all questions.
   - with a hazardous parameter, where `true` means `is hazardous`
   - default hazardous value is `false`
   - format JSON
-   
+
 ## Additional Instructions
 
 - Fork this repository
@@ -83,3 +83,47 @@ Dear candidate, please follow this readme and solve all questions.
 - Componential thinking.
 - Knowledge of Docker.
 - Usage of MongoDB as persistance storage.
+
+
+---
+
+# Directory structure
+
+* `model` - directory that contains models for mongodb database.
+* `routes` - all routes for the application
+* `test` - contains tests for the application.
+* `test/fixture` - data for tests
+* `tools` - contains scripts for application that might be run via cron or just helper scripts to do some work.
+
+# Files structure
+
+* `conf.js` - contains main configuration of application.
+* `run.js` - entry point for web-server.
+* `app.js` - contains web application based on `express.js`
+
+# Default settings
+
+* MongoDB database name: `mcmakler`.
+* Application port: `3001`.
+* Host: `127.0.0.1:3001`
+
+# About tests
+
+Tests use fixtures (a data that is used for test). So the response of the server is checked based on the data from
+fixture. To load fixture separate step with name `fixture/{id}` is used, where `id` is the directory name of a fixture.
+
+# NPM scripts
+
+There are several npm scripts in the project:
+
+* `start` - starts developing server (by default port is 3001, see `conf.js`). Use `loadNasaData` script to setup data
+  for DB.
+* `test` - run tests. It uses different MongoDB database, that is set via `cross-env`.
+* `loadNasaData` - script that is loads recent data (last 3 days) from NASA.
+
+
+# Dependencies
+
+If the setup is used for test, then all dependencies have to be installed,
+otherwise production dependencies may be installed.
+

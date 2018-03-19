@@ -1,0 +1,5 @@
+--require mocha-steps
+-R spec
+--no-timeouts
+--slow 10s
+test/
