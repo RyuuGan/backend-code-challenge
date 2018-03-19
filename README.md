@@ -110,7 +110,7 @@ Dear candidate, please follow this readme and solve all questions.
 ## About tests
 
 Tests use fixtures (a data that is used for test). So the response of the server is checked based on the data from
-fixture. To load fixture separate step with name `fixture/{id}` is used, where `id` is the directory name of a fixture.
+fixture. The separate step is used (with name `fixture/{id}`) to load fixture , where `id` is the directory name of a fixture.
 
 ## NPM scripts
 
