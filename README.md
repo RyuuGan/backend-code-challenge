@@ -87,7 +87,7 @@ Dear candidate, please follow this readme and solve all questions.
 
 ---
 
-# Directory structure
+## Directory structure
 
 * `model` - directory that contains models for mongodb database.
 * `routes` - all routes for the application
@@ -95,24 +95,24 @@ Dear candidate, please follow this readme and solve all questions.
 * `test/fixture` - data for tests
 * `tools` - contains scripts for application that might be run via cron or just helper scripts to do some work.
 
-# Files structure
+## Files structure
 
 * `conf.js` - contains main configuration of application.
 * `run.js` - entry point for web-server.
 * `app.js` - contains web application based on `express.js`
 
-# Default settings
+## Default settings
 
 * MongoDB database name: `mcmakler`.
 * Application port: `3001`.
 * Host: `127.0.0.1:3001`
 
-# About tests
+## About tests
 
 Tests use fixtures (a data that is used for test). So the response of the server is checked based on the data from
 fixture. To load fixture separate step with name `fixture/{id}` is used, where `id` is the directory name of a fixture.
 
-# NPM scripts
+## NPM scripts
 
 There are several npm scripts in the project:
 
@@ -122,7 +122,7 @@ There are several npm scripts in the project:
 * `loadNasaData` - script that is loads recent data (last 3 days) from NASA.
 
 
-# Dependencies
+## Dependencies
 
 If the setup is used for test, then all dependencies have to be installed,
 otherwise production dependencies may be installed.
